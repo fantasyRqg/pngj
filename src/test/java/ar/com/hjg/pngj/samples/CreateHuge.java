@@ -9,7 +9,6 @@ import ar.com.hjg.pngj.ImageInfo;
 import ar.com.hjg.pngj.ImageLineHelper;
 import ar.com.hjg.pngj.ImageLineInt;
 import ar.com.hjg.pngj.PngWriter;
-import ar.com.hjg.pngj.pixels.PixelsWriterDefault;
 import ar.com.hjg.pngj.test.TestSupport;
 
 /**
@@ -27,7 +26,7 @@ public class CreateHuge {
         filename == null ? TestSupport.createNullOutputStream() : new FileOutputStream(new File(
             filename));
     PngWriter png = new PngWriter(os, new ImageInfo(cols, rows, 8, false));
-    ((PixelsWriterDefault) png.getPixelsWriter()).setFilterType(FilterType.FILTER_AVERAGE);
+      png.getPixelsWriter().setFilterType(FilterType.FILTER_AVERAGE);
     png.setIdatMaxSize(0x10000);
     png.setCompLevel(6);
     ImageLineInt iline1 = new ImageLineInt(png.imgInfo);

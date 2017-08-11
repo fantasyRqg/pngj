@@ -181,7 +181,7 @@ public class WriterFiltersPerformanceUtil {
     int[] types = Arrays.copyOf(filters, 5);
     if (usePercent)
       for (int i = 0; i <= 4; i++)
-        types[i] = (int) ((types[i] * 100 + rows / 2) / rows);
+          types[i] = (types[i] * 100 + rows / 2) / rows;
     String s = Arrays.toString(types);
     return s.substring(1, s.length() - 1).replace(" ", "");
   }

@@ -43,7 +43,7 @@ public abstract class ChunkReader {
     /**
      * Does not store nor process - implies crcCheck=false (by default).
      */
-    SKIP;
+    SKIP
   }
 
   /**
@@ -60,7 +60,7 @@ public abstract class ChunkReader {
     this.mode = mode;
     chunkRaw = new ChunkRaw(clen, id, mode == ChunkReaderMode.BUFFER);
     chunkRaw.setOffset(offsetInPng);
-    this.crcCheck = mode == ChunkReaderMode.SKIP ? false : true; // can be changed with setter
+      this.crcCheck = mode != ChunkReaderMode.SKIP; // can be changed with setter
   }
 
   /**

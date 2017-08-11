@@ -72,7 +72,7 @@ public enum FilterType {
 
   public final int val;
 
-  private FilterType(int val) {
+    FilterType(int val) {
     this.val = val;
   }
 

@@ -15,6 +15,6 @@ public interface IChunkFactory {
    * @param imgInfo Not normally necessary, but some chunks want this info
    * @return should never return null.
    */
-  public PngChunk createChunk(ChunkRaw chunkRaw, ImageInfo imgInfo);
+  PngChunk createChunk(ChunkRaw chunkRaw, ImageInfo imgInfo);
 
 }

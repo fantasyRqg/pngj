@@ -130,9 +130,7 @@ public class ChunksListForWrite extends ChunksList {
       preferred = c.getChunkGroup();
     if (currentGroup == preferred)
       return true;
-    if (currentGroup > preferred && currentGroup <= maxChunkGroup)
-      return true;
-    return false;
+      return currentGroup > preferred && currentGroup <= maxChunkGroup;
   }
 
   public int writeChunks(OutputStream os, int currentGroup) {

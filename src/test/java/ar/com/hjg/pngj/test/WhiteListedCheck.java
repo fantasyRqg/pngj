@@ -1,5 +1,9 @@
 package ar.com.hjg.pngj.test;
 
+import junit.framework.TestCase;
+
+import org.junit.Test;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -10,10 +14,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import junit.framework.TestCase;
-
-import org.junit.Test;
 
 /**
  * 
@@ -84,9 +84,7 @@ public class WhiteListedCheck {
   }
 
   private boolean ignoreClassName(String name) {
-    if (name.startsWith("ar.com.hjg.png"))
-      return true; // those correspond to this package
-    return false;
+      return name.startsWith("ar.com.hjg.png");
   }
 
   @Test

@@ -31,7 +31,7 @@ public class NeuQuant {
 
   public interface PixelGetter {
     // 3 ints if not alpha, 4 if alpha
-    public int[] getPixel(int row, int col);
+    int[] getPixel(int row, int col);
   }
 
   // parameters - do not change during running - naming convention:

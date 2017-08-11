@@ -19,6 +19,6 @@ public interface IImageLineSetFactory<T extends IImageLine> {
    * @param noffset : how many lines we want to skip from the original image (normally 0)
    * @param step : row step (normally 1)
    */
-  public IImageLineSet<T> create(ImageInfo imgInfo, boolean singleCursor, int nlines, int noffset,
-      int step);
+  IImageLineSet<T> create(ImageInfo imgInfo, boolean singleCursor, int nlines, int noffset,
+                          int step);
 }

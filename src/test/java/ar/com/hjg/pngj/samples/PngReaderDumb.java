@@ -93,7 +93,7 @@ public class PngReaderDumb {
   }
 
   protected boolean shouldStoreChunkOnList(ChunkRaw raw) {
-    return raw.id.equals("IDAT") && !includeIdat ? false : true;
+      return !(raw.id.equals("IDAT") && !includeIdat);
   }
 
   public void setShouldCloseStream(boolean shouldCloseStream) {

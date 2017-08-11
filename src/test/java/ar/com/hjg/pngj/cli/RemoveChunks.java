@@ -180,9 +180,7 @@ public class RemoveChunks {
       boolean ispresent = chunksIds.contains(id.toUpperCase());
       if (keep && !ispresent)
         return true; // skip
-      if (ispresent && !keep)
-        return true;// skip
-      return false;
+        return ispresent && !keep;
     }
 
     @Override

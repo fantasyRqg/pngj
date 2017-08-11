@@ -248,8 +248,6 @@ public class ImageInfo {
       return false;
     if (indexed != other.indexed)
       return false;
-    if (rows != other.rows)
-      return false;
-    return true;
+      return rows == other.rows;
   }
 }

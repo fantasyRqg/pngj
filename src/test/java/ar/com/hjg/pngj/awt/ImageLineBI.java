@@ -334,7 +334,7 @@ public class ImageLineBI implements IImageLine {
               if (colormodel.getColorSpace() != createColorSpace(false))
                 break;// unrecognized colorspace, no luck
             }
-            int[] nbits = ((ComponentColorModel) colormodel).getComponentSize();
+              int[] nbits = colormodel.getComponentSize();
             datasize = nbits[0] / 8;
             if (nbits[0] < 8)
               break;
@@ -363,7 +363,7 @@ public class ImageLineBI implements IImageLine {
                 break;
             } else if (sampleModel instanceof SinglePixelPackedSampleModel) { // we accept this only for one channel
                                                                               // (gray 8 or 16 bits)
-              int[] sizes = ((SinglePixelPackedSampleModel) sampleModel).getSampleSize();
+                int[] sizes = sampleModel.getSampleSize();
               if (sizes.length != 1)
                 break;
               datasize = sizes[0] / 8;

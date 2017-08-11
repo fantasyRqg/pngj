@@ -25,7 +25,7 @@ public interface IImageLineSet<T extends IImageLine> {
    * <p>
    * Throws exception if not available. The caller is supposed to know what he/she is doing
    **/
-  public IImageLine getImageLine(int n);
+  IImageLine getImageLine(int n);
 
   /**
    * Like {@link #getImageLine(int)} but uses the raw numbering inside the LineSet This makes little sense for a cursor
@@ -33,7 +33,7 @@ public interface IImageLineSet<T extends IImageLine> {
    * @param n Should normally go from 0 to {@link #size()}
    * @return
    */
-  public IImageLine getImageLineRawNum(int n);
+  IImageLine getImageLineRawNum(int n);
 
 
   /**
@@ -43,11 +43,11 @@ public interface IImageLineSet<T extends IImageLine> {
    * return false, but getImageLine(n) can be ok)
    * 
    **/
-  public boolean hasImageLine(int n);
+  boolean hasImageLine(int n);
 
   /**
    * Internal size of allocated rows This is informational, it should rarely be important for the caller.
    **/
-  public int size();
+  int size();
 
 }

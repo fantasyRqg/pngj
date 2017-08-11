@@ -1,5 +1,7 @@
 package ar.com.hjg.pngj.test;
 
+import junit.framework.TestCase;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,7 +18,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Random;
 
-import junit.framework.TestCase;
 import ar.com.hjg.pngj.BufferedStreamFeeder;
 import ar.com.hjg.pngj.ChunkSeqReader;
 import ar.com.hjg.pngj.ChunkSeqSkipping;
@@ -145,7 +146,7 @@ public class TestSupport {
     ft[png.imgInfo.rows] = -1; // dummy end value to ease computation
     if (showSummPercent) {
       for (int i = 0; i <= 4; i++) {
-        types[i] = (int) ((types[i] * 100 + png.imgInfo.rows / 2) / png.imgInfo.rows);
+          types[i] = (types[i] * 100 + png.imgInfo.rows / 2) / png.imgInfo.rows;
       }
     }
     if (showSumm || showSummPercent)
